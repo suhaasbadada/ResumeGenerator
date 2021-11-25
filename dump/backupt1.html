@@ -1,0 +1,148 @@
+{% extends "sidebar.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/temp1.css">
+    <title>Details</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="static/details.js"></script>
+
+ <!-- start of template -->
+ {% block content %}
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+ <link rel="stylesheet" href="static/temp1.css">
+ <div class="container" id="cv-template">
+    <div class="row">
+        <div class="col-md-4 text-center py-5 background">
+            <!-- first column-->
+            <img
+            src="https://images.hindustantimes.com/img/2021/09/09/550x309/Dhoni_1631197013569_1631197013734.jpg"
+            alt="dhoni"
+            class="img-fluid myimg" 
+			id="imgT"
+            />
+       
+            <div class="container">
+            <strong><p id="nameT1">{{dictt['name']}}</p></strong>
+            <span><label for="number" >{{dictt['contact']}}</label></span>
+            <p id="addressT">{{dictt['address']}}</p>
+            <hr>    
+			<p if="emailT">{{dictt['email']}}</p>
+            <p><a id="gitT" href="#1">{{dictt['github']}}</a></p>
+            <p><a id="linkedT" href="#2">{{dictt['linkedin']}}</a></p>
+            <hr>
+            
+           <h5> <b>Technical Skills </b><h5>
+            <ul>
+                {% for s in dictt['techskills'] %}
+                <li> {{s}}  </li>
+                {% endfor %}
+            </ul>
+                          
+            <h5><b>Soft Skills</b><h5>
+            <ul>0
+                {% for s in dictt['softskills'] %}
+                <li> {{s}}  </li>
+                {% endfor %}
+            </ul>
+
+             
+        </div>
+
+        </div>
+            
+        <div class="col-md-8 py-5">
+            <!-- second column -->
+            <h1 id="nameT2" class="text-center" style="font-weight:800">{{dictt['name']}}</h1>
+
+            <!-- Objective Card -->
+            <div class="card mt-4 ">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body">
+                    <p id="objT">{{dictt['obj']}}</p>
+                </div>
+            </div>
+
+            <!-- Work Experience Card-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="weT">
+                        {% for s in dictt['workexp'] %}
+                        <li> {{s}}  </li>
+                        {% endfor %}
+                   </ul>
+                </div>
+            </div>
+
+            <!--Academic Qualification-->
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Academic Qualification</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="aqT">
+                        {% for s in dictt['aqual'] %}
+                        <li> {{s}}  </li>
+                        {% endfor %}
+                     </ul>
+                </div>
+            </div>
+
+			<!--Projects Card-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Projects</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="pjT">
+                        {% for s in dictt['projects'] %}
+                        <li> {{s}}  </li>
+                        {% endfor %}
+                     </ul>
+                </div>
+            </div>
+			
+            <div class="container mt-3 text-center">
+                <button onclick="window.print()" class="btn background">Print</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
+
+
+
+
+
+<!-- IDS
+nameField   nameT nameT2
+contactField    contactT
+addrField   
+faceField   fbT
+instaField  instaT
+linkedField linkedT
+objectiveField objT
+
+weT
+aqT
+aqAddButton
+-->

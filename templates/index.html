@@ -1,0 +1,128 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/details.css">
+    <title>Details</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="static/details.js"></script>
+    <form method="POST" enctype="multipart/form-data" action="/pick">
+    <div class="container" id="cvf">
+        <h1 class="text-center my-2"><b>Resume Generator</b></h1>
+        <p class="center-text">Enter your details</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                
+                <div class="form-group">
+                    <label for="nameField">Name</label>
+                    <input type="text" id="nameField" name="nameField" class="form-control" value="{{dictt['name']}}">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Contact</label>
+                    <input type="text" id="contactField" name="contactField" class="form-control" value="{{dictt['contact']}}">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="emailField">Email</label>
+                    <input type="email" id="emailField" name="emailField" class="form-control" value="{{dictt['email']}}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="addressField">Address</label>
+                    <textarea id="addressField" name="addressField" class="form-control" rows="5">{{dictt['address']}}</textarea>
+                </div>
+				
+				<div class="form-group mt-3">
+				<label>Select your profile picture</label>
+				<input type="file" id="imgField" name="imgField" class="form-control"/>
+				</div>
+
+                <p class="text-secondary my-3"></p>Important Links</p>
+                <div class="form-group mt-2">
+                    <label for="gitField">Github</label>
+                    <input type="text" id="gitField" name="gitField" class="form-control" value="{{dictt['github']}}">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">Linkedin</label>
+                    <input type="text" id="linkedField" name="linkedField" class="form-control" value="{{dictt['linkedin']}}">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="ssField">Soft Skills</label>
+                    <textarea type="text" id="ssField" name="ssField" class="form-control">{{dictt['softskills']}}</textarea>
+                </div>
+
+                <div class="form-group mt-2" id="ts">
+                    <label for="tsField">Technical Skills</label>
+                    <textarea type="text" id="tsField" name="tsField" class="form-control">{{dictt['techskills']}}</textarea>
+                    </div>
+            </div>
+
+
+
+            <div class="col-md-6">
+                <h3>Educational Information</h3>
+
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" name="objectiveField" class="form-control" rows="2" >{{dictt['obj']}}</textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we" name="we">
+                    <label for="">Work Experience</label>
+                    <textarea  id="weffield" name="weffield" class="form-control weField" rows="2">{{dictt['workexp']}}</textarea>
+                    <!--
+                    <div class="container text-center mt-2" id="weAddButton" name="weAddButton">
+                        <button type="button" onClick="addNewWEField()" class="btn btn-primary ntn-sm">Add</button>
+                    </div>
+                    -->
+ 
+                <div class="form-group mt-2" id="aq" name="aq">
+                    <label for="">Academic Qualifications   </label>
+                    <textarea id="aqField" name="aqField" class="form-control eqField" rows="2">{{dictt['aqual']}}</textarea> 
+                
+                <!--
+                <div class="container text-center mt-2 aqAddButton" id="aqAddButton" name="aqAddButton">
+                    <button type="button" onClick="addNewAQField()" class="btn btn-primary ntn-sm">Add</button>
+                </div>
+                -->
+
+                <div class="form-group mt-2" id="pj" name="pj">
+                    <label for="">Projects</label>
+                    <textarea id="pjField" name="pjField" class="form-control projField" rows="2">{{dictt['projects']}}</textarea> 
+                <!--
+                    <div class="container text-center mt-2 projAddButton" id="projAddButton">
+                        <button type="button" onClick="addNewprojField()" class="btn btn-primary ntn-sm">Add</button>
+                    </div>
+                -->
+
+            </div>
+        </div>
+    </div>
+   <!-- 
+    <div class="container text-center my-3">
+        <button class="btn btn-primary btn-lg" name="btnField" value="update">Update</button>
+    </div>
+    -->
+    
+    <div class="container text-center my-3">
+        <button onClick="generateCV()" class="btn btn-primary btn-lg" name="btnField" value="generate">Update & Proceed</button>
+    </div>
+    </div>
+    </div>
+    </div>
+</form>
+
+</body>
+</html>
+{%endblock%}

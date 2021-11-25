@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="static/sidebar.css">
+        
+        <title>Sidebar sub menus</title>
+
+        <style>
+            .dark-mode {
+                filter: invert(1) hue-rotate(180deg)
+            }
+            #darkModeButton{
+                background-color: #12192c;
+                border-color: #12192c;
+            }
+            #detailsButton{
+                background-color: #12192c;
+                border-color: #12192c;
+            }
+            #homeButton{
+                background-color: #12192c;
+                border-color: #12192c;
+            }
+
+            #lo{
+                background-color: #12192c;
+                border-color: #12192c;
+            }
+            #librButton{
+                background-color: #12192c;
+                border-color: #12192c;
+            }
+        </style>
+    </head>
+   
+    <body id="body-pd">
+        <h1 id="dashboard-heading">Dashboard</h1>
+
+        <div id="about_box">
+            <div id="about_box_text">
+            <h1>Welcome to Resume Generator Online!</h1>
+            <p>Choose a template to begin with and style it the way you want! Or just  print them directly! </p>
+        </div>
+            <br><br>
+            <p>
+                <h3>How to Use</h3>
+                <ol>
+                    <li> To enter/update your details, click on the Details button. 
+                        <br>If no changes to be made to your details, directly go the the Templates button 
+                    </li>
+                    <li>
+                        If you multiple achievements,projects or skills just seperate them with a semi-colon ( ; )
+                        <br> Easy to use,saves your time
+                    </li>
+                    
+                    <li> Choose a template. You can now click on the print button if you like your template.<br>
+                         You can also play around with the styles and colors until it's right for you, by clicking on the settings button displaye on the screen, and then click print.</li>
+                  </ol>
+
+                  <br>
+                  <hr>
+                  <p>Made by:<br>    Suhaas Rao Badada: suhaasbadada@gmail.com <br>  Meher Jyothi Talluri: t.meher2002@gmail.com</p>
+
+        </div>
+
+        {% block content %}{% endblock %}
+        <form action="/whatnext" method='POST'>
+            <div class="l-navbar" id="navbar">
+                <nav class="nav">
+                    <div>
+                        <div class="nav__brand">
+                            <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                            <a href="#" class="nav__logo">Resume Maker</a>
+                        </div>
+                        <div class="nav__list">
+                            <button type="submit" name = "act" id = "homeButton" value="homeButton" class="nav__link">
+                                <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                                <span class="nav__name">Home</span>
+                            </button>
+    
+    
+                            <button type="submit" name= "act" id="librButton" value="librButton" class="nav__link">
+                                <ion-icon name="library-outline" class="nav__icon"></ion-icon>
+                                <span class="nav__name">Template Library</span>
+                            </button>
+    
+                            <button type="submit" name= "act" id="detailsButton" value="detailsButton" class="nav__link">
+                                <ion-icon name="pencil-outline" class="nav__icon"></ion-icon>
+                                <span class="nav__name">Details</span>
+                            </button>
+                       
+    
+                            <button type="button" name= "dbtn" id="darkModeButton" value="darkModeButton" class="nav__link"> 
+                                <ion-icon name="moon" class="nav__icon"></ion-icon>
+                                <span class="nav__name">Invert Colours</span>
+                            </button>
+                            <!--
+                            <button type="button" name= "dbtn" id="qrButton" value="qrButton" class="nav__link"> 
+                                <ion-icon name="qr-code-outline" class="nav__icon"></ion-icon>
+                                <span class="nav__name"></span>
+                            </button>
+                            -->
+                    </div>
+                   
+                    <button type="submit" class="nav__link" name = "act" id = "lo" value="logout">              
+                        <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Log Out</span>
+                    </button>
+                
+                </form>
+            </nav>
+        </div>
+        
+        
+      
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+        <script src="static/sidebar.js"></script>
+
+        <script>
+            
+           $(function() {
+                $("#darkModeButton").click(function() {
+                    document.documentElement.classList.toggle('dark-mode');
+                   // $("#canvas-wrapper").toggleClass("dark-mode");
+                   //console.log("attemping to toggle");
+                });
+            });
+        </script>
+
+    </body>
+</html>
+
+<!-- class="nav__link collapse" deleted for now on the submit type buttons-->

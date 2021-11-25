@@ -1,0 +1,77 @@
+#cvf{
+    display:none;
+}
+
+.myimg{   
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+}
+
+
+#cv-template{
+font-family: Palatino Linotype;
+border:2px solid black;
+color: white;
+width:794px;
+}
+.grey-bg{
+    background-color:#303030;
+}
+
+.black-bg, .card{
+    background-color: black;
+}
+
+#settingsbtn{
+   color:black;
+}
+#printbtn{
+    color:black;
+ }
+#toggle{
+    position:relative;
+    font-size: 1.5rem; 
+    color:white;
+    background-color:white;
+    border-color:white;
+    border-radius:50px;
+}
+#toggle-div{
+    text-align: left;
+}
+
+select{
+    padding:3px;
+    border:3px solid white;
+    background: transparent;
+    appearance: none;
+    font-size: 12px;
+    color: black;
+    border:1px solid black;
+  }
+  #style-section{
+      background-color:white;
+      color:black;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      border:1px solid black;
+      padding:30px;
+      box-shadow: 10px 10px 5px #ccc;
+      width:600px;
+      font-size:12px;
+  }
+  #apply-btn{
+      color:black;      
+      background-color: white;
+      position: absolute;
+      text-align: center;
+  }
+
+#dashboard-heading{
+    font-family:'Poppins', sans-serif;
+    font-weight:bold;
+}
+
+#about_box{
+    display:none;
+}

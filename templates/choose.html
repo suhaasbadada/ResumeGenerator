@@ -1,0 +1,56 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<title>swpokd</title>
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/choose.css">
+    <title>Preview</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <form method="POST" action="/output" >
+    <div id="choosable" style="margin: 10px;">
+        <!-- <button name="select" id="t1" class="btn tbtn1" value="first">Template 1</button>
+        <button name="select" class="btn tbtn2" value="second">Template 2</button>
+        <br>
+        <button name="select" class="btn tbtn3" value="third">Template 3</button>
+        <button name="select" class="btn tbtn4" value="fourth">Template 4</button> -->
+
+        <div style="margin: 10px;">
+        <div class="card" style="width: 25rem;height:25rem">
+            <img class="card-img-top" src="./static/skins/t1.png"  alt="Card image cap">
+              <button name="select" id="t1" class="btn btn-outline-primary" value="first">Template 1</button>
+             </div>
+          </div>
+          <div style="margin: 10px;">
+          <div class="card" style="width: 25rem;height:25rem">
+            <img class="card-img-top" src="./static/skins/t3.png" alt="Card image cap">
+              <button name="select" class="btn btn-outline-primary" value="third">Template 3</button>   
+            </div>
+          </div>
+        </div>
+        <div style="margin: 10px;">
+          <div style="margin: 10px;">
+          <div class="card" style="width: 25rem;height:25rem">
+            <img class="card-img-top" src="./static/skins/t22.png" alt="Card image cap">
+              <button name="select" class="btn btn-outline-primary" value="second">Template 2</button>
+          </div> </div>
+          <div style="margin: 10px;">
+          <div class="card" style="width: 25rem;height:25rem">
+            <img class="card-img-top" src="./static/skins/t44.png" alt="Card image cap">
+              <button name="select" class="btn btn-outline-primary" value="fourth">Template 4</button>
+          </div>
+        </div> </div>
+  
+    </form>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+{%endblock%}

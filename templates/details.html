@@ -1,0 +1,182 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/details.css">
+    <title>Details</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="static/details.js"></script>
+
+    <form method="POST" action="/pick">
+    <div class="container" id="cvf">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="center-text">Enter your details</p>                 
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                
+                <div class="form-group">
+                    <label for="nameField">Name</label>
+                    <input type="text" id="nameField" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Contact</label>
+                    <input type="text" name="contactField" id="contactField" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="addressField">Address</label>
+                    <textarea id="addrField" class="form-control" rows="5"></textarea>
+                </div>
+
+                <p class="text-secondary my-3"></p>Important Links</p>
+                <div class="form-group mt-2">
+                    <label for="fbField">Facebook</label>
+                    <input type="text" id="faceField" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instaField">Instagram</label>
+                    <input type="text" id="instaField" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">Linkedin</label>
+                    <input type="text" id="linkedField" class="form-control">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6">
+                <h3>Educational Information</h3>
+
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea class="form-control weField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onClick="addNewWEField()" class="btn btn-primary ntn-sm">Add</button>
+                    </div>
+ 
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualifications   </label>
+                    <textarea class="form-control eqField" rows="3"></textarea> 
+                
+                <div class="container text-center mt-2 aqAddButton" id="aqAddButton">
+                    <button onClick="addNewAQField()" class="btn btn-primary ntn-sm">Add</button>
+                </div>
+
+                <div class="form-group mt-2" id="pj">
+                    <label for="">Projects</label>
+                    <textarea class="form-control projField" rows="3"></textarea> 
+                
+                <div class="container text-center mt-2 projAddButton" id="projAddButton">
+                    <button onClick="addNewprojField()" class="btn btn-primary ntn-sm">Add</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center my-3">
+        <button class="btn btn-primary btn-lg">Generate CV</button>
+    </div>
+    </div>
+    </div>
+</form>
+    <!--
+   
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+               
+                <img
+                src="https://images.hindustantimes.com/img/2021/09/09/550x309/Dhoni_1631197013569_1631197013734.jpg"
+                alt="dhoni"
+                class="img-fluid myimg"              
+                />
+           
+                <div class="container">
+                <p id="nameT1"></p>
+                <p id="contactT">9398274983</p>
+                <p id="addressT">address</p>
+                <hr>
+                <p><a id="fbT" href="#1">Facebook</a></p>
+
+                <p><a id="instaT" href="#2">Instagram</a></p>
+
+                <p><a id="linkedT" href="#3">LinkedIn</a></p>
+                 
+            </div>
+
+            </div>
+                
+            <div class="col-md-8 py-5">
+               
+                <h1 id="nameT2" class="text-center" style="font-weight:800">Mahendra Singh Dhoni</h1>
+
+              
+                <div class="card mt-4 ">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objT">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                           Aliquam architecto vero commodi! Reprehenderit similique nam molestiae itaque
+                           culpa repudiandae suscipit. Incidunt ducimus cupiditate blanditiis quasi numquam 
+                           asperiores rerum quo enim necessitatibus, ex veritatis tempora quis, voluptate minus
+                           ullam repudiandae distinctio culpa a labore expedita excepturi inventore totam?
+                           Dicta, repellendus pariatur?</p>
+                    </div>
+                </div>
+
+               
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                         </ul>
+                    </div>
+                </div>
+
+
+                <div class="container mt-3 text-center">
+                    <button onclick="window.print()" class="btn background">Print</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+-->
+
+
+</body>
+</html>
+{%endblock%}

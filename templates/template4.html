@@ -1,0 +1,374 @@
+{% extends "sidebar.html" %}
+
+  {% block content %}
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+
+<link rel="stylesheet" href="static/temp4.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<!--JSS and html for advanced options button-->
+<script>
+	$(document).ready(function() {
+	   $("#style-section").hide();
+   
+	   $("#toggle").click(function(){
+		  $("#style-section").toggle( 'slow', function(){
+			 $(".log").text('Toggle Transition Complete');
+		  });
+	   });
+	});
+   </script>
+   <div id="toggle-div">
+    <button id = "toggle">
+        <ion-icon name="settings-outline" id="settingsbtn">settings</ion-icon>
+    </button>
+    
+    <button id="toggle" onclick="printdiv('#cv-template')"><ion-icon name="print-outline" id="printbtn">print</ion-icon></button>
+    </div>
+
+<!--JS and HTML for style-section-->
+<script>
+    function op(){
+	var fontFamilyHeading = document.getElementById("fontFamilyHeading").value;
+    var elements = document.getElementsByName('heading'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.fontFamily = fontFamilyHeading;
+	}
+
+    //change later
+    var fontFamilyBody = document.getElementById("fontFamilyBody").value;
+    document.getElementById('cv-template').style.fontFamily = fontFamilyBody;
+
+
+	var fontColorHeading = document.getElementById("fontColorHeading").value;
+    var elements = document.getElementsByName('heading'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.color = fontColorHeading;
+	}
+
+    //change later
+    var fontColorBody = document.getElementById("fontColorBody").value;
+    document.getElementById('cv-template').style.color = fontColorBody;
+
+
+	var backgroundColor = document.getElementById("backgroundColor").value;
+    document.getElementById('cv-template').style.backgroundColor = backgroundColor;
+
+  var backgroundColorHeader = document.getElementById("backgroundColorHeader").value;
+  document.getElementById('header').style.backgroundColor = backgroundColorHeader; 
+}
+ </script>
+
+
+<div id="style-section">
+
+ <label for="fontFamilyHeading">Heading Font Family</label>
+ <select name="fontFamilyHeading" id="fontFamilyHeading">
+    <option value="select">Select</option>
+    <option value="papyrus">Papyrus</option>
+    <option value="impact">Impact</option>
+    <option value="copperplate">Copperplate</option>
+     <option value="arial">Arial</option>
+     <option value="verdanna">verdanna</option>
+     <option value="helvetica">Helvetica</option>
+     <option value="tahoma">Tahoma</option>
+     <option value="trebuchetms">Trebuchet MS</option>
+     <option value="timesnewroman">Times New Roman</option>
+     <option value="georgia">Georgia</option>
+     <option value="garamond">Garamond</option>
+     <option value="couriernew">Courier New</option>
+     <option value="brushscriptmt">Brush Script MT</option>
+ </select> 
+
+ <label for="fontFamilyBody">Body Font Family</label>
+ <select name="fontFamilyBody" id="fontFamilyBody">
+    <option value="select">Select</option>
+    <option value="papyrus">Papyrus</option>
+    <option value="impact">Impact</option>
+    <option value="copperplate">Copperplate</option>
+     <option value="arial">Arial</option>
+     <option value="verdanna">verdanna</option>
+     <option value="helvetica">Helvetica</option>
+     <option value="tahoma">Tahoma</option>
+     <option value="trebuchetms">Trebuchet MS</option>
+     <option value="timesnewroman">Times New Roman</option>
+     <option value="georgia">Georgia</option>
+     <option value="garamond">Garamond</option>
+     <option value="couriernew">Courier New</option>
+     <option value="brushscriptmt">Brush Script MT</option>
+ </select>
+
+ <br><br>
+ 
+ <label for="fontColorHeading">Heading Font Color</label>
+ <select name="fontColorHeading" id="fontColorHeading">
+    <option value="select">Select</option>
+    <option value="blueviolet">Blue Violet</option>
+    <option value="darkcyan">Dark Cyan</option>
+    <option value="cadetblue">Cadet Blue</option>
+    <option value="cyan">Cyan</option>
+    <option value="darkblue">Dark Blue</option>
+    <option value="darkorchid">Dark Orchid</option>
+    <option value="mistyrose">Misty Rose</option>
+    <option value="white">White</option>
+    <option value="teal">Teal</option>
+    <option value="turquoise">Turquoise</option>
+    <option value="silver">Silver</option>
+    <option value="springgreen">Spring Green</option>
+    <option value="lightcoral">Light Coral</option>
+    <option value="hotpink">Hot Pink</option>
+    <option value="grey">Grey</option>
+    <option value="biege">Biege</option>
+    <option value="aquamarine">Aquamarine</option>
+    <option value="azure">Azure</option>
+    <option value="darkolivegreen">Dark Olive Green</option>
+     <option value="red">Red</option>
+     <option value="blue">Blue</option>
+     <option value="brown">Brown</option>
+     <option value="black">Black</option>
+     <option value="green">Green</option>
+     <option value="pink">Pink</option>
+     <option value="yellow">Yellow</option>
+     <option value="gold">Gold</option>
+     <option value="sienna">Sienna</option>
+     <option value="tan">Tan</option>
+     <option value="tomato">Tomato</option>
+ </select>
+
+
+ <label for="fontColorBody">Body Font Color</label>
+ <select name="fontColorBody" id="fontColorBody">
+    <option value="select">Select</option>
+    <option value="blueviolet">Blue Violet</option>
+    <option value="darkcyan">Dark Cyan</option>
+    <option value="cadetblue">Cadet Blue</option>
+    <option value="cyan">Cyan</option>
+    <option value="darkblue">Dark Blue</option>
+    <option value="darkorchid">Dark Orchid</option>
+    <option value="mistyrose">Misty Rose</option>
+    <option value="white">White</option>
+    <option value="teal">Teal</option>
+    <option value="turquoise">Turquoise</option>
+    <option value="silver">Silver</option>
+    <option value="springgreen">Spring Green</option>
+    <option value="lightcoral">Light Coral</option>
+    <option value="hotpink">Hot Pink</option>
+    <option value="grey">Grey</option>
+    <option value="biege">Biege</option>
+    <option value="aquamarine">Aquamarine</option>
+    <option value="azure">Azure</option>
+    <option value="darkolivegreen">Dark Olive Green</option>
+     <option value="red">Red</option>
+     <option value="blue">Blue</option>
+     <option value="brown">Brown</option>
+     <option value="black">Black</option>
+     <option value="green">Green</option>
+     <option value="pink">Pink</option>
+     <option value="yellow">Yellow</option>
+     <option value="gold">Gold</option>
+     <option value="sienna">Sienna</option>
+     <option value="tan">Tan</option>
+     <option value="tomato">Tomato</option>
+ </select>
+
+ <br><br>
+ 
+ <label for="backgroundColor">Background Color</label>
+ <select name="backgroundColor" id="backgroundColor">
+    <option value="select">Select</option>
+    <option value="blueviolet">Blue Violet</option>
+    <option value="darkcyan">Dark Cyan</option>
+    <option value="cadetblue">Cadet Blue</option>
+    <option value="cyan">Cyan</option>
+    <option value="darkblue">Dark Blue</option>
+    <option value="darkorchid">Dark Orchid</option>
+    <option value="mistyrose">Misty Rose</option>
+    <option value="white">White</option>
+    <option value="teal">Teal</option>
+    <option value="turquoise">Turquoise</option>
+    <option value="silver">Silver</option>
+    <option value="springgreen">Spring Green</option>
+    <option value="lightcoral">Light Coral</option>
+    <option value="hotpink">Hot Pink</option>
+    <option value="grey">Grey</option>
+    <option value="biege">Biege</option>
+    <option value="aquamarine">Aquamarine</option>
+    <option value="azure">Azure</option>
+    <option value="darkolivegreen">Dark Olive Green</option>
+     <option value="red">Red</option>
+     <option value="blue">Blue</option>
+     <option value="brown">Brown</option>
+     <option value="black">Black</option>
+     <option value="green">Green</option>
+     <option value="pink">Pink</option>
+     <option value="yellow">Yellow</option>
+     <option value="gold">Gold</option>
+     <option value="sienna">Sienna</option>
+     <option value="tan">Tan</option>
+     <option value="tomato">Tomato</option>
+ </select>
+
+
+ <label for="backgroundColorHeader">Header Background Color </label>
+ <select name="backgroundColorHeader" id="backgroundColorHeader">
+    <option value="select">Select</option>
+    <option value="blueviolet">Blue Violet</option>
+    <option value="darkcyan">Dark Cyan</option>
+    <option value="cadetblue">Cadet Blue</option>
+    <option value="cyan">Cyan</option>
+    <option value="darkblue">Dark Blue</option>
+    <option value="darkorchid">Dark Orchid</option>
+    <option value="mistyrose">Misty Rose</option>
+    <option value="white">White</option>
+    <option value="teal">Teal</option>
+    <option value="turquoise">Turquoise</option>
+    <option value="silver">Silver</option>
+    <option value="springgreen">Spring Green</option>
+    <option value="lightcoral">Light Coral</option>
+    <option value="hotpink">Hot Pink</option>
+    <option value="grey">Grey</option>
+    <option value="biege">Biege</option>
+    <option value="aquamarine">Aquamarine</option>
+    <option value="azure">Azure</option>
+    <option value="darkolivegreen">Dark Olive Green</option>
+     <option value="red">Red</option>
+     <option value="blue">Blue</option>
+     <option value="brown">Brown</option>
+     <option value="black">Black</option>
+     <option value="green">Green</option>
+     <option value="pink">Pink</option>
+     <option value="yellow">Yellow</option>
+     <option value="gold">Gold</option>
+     <option value="sienna">Sienna</option>
+     <option value="tan">Tan</option>
+     <option value="tomato">Tomato</option>
+ </select>
+ <br><br>
+ <input type="submit" value="Apply" onClick="op()" id="apply-btn">
+ <br><br>
+ </div>
+ <br><br>
+
+
+
+<!--HTML for cv-template-->
+<div class="container" id="cv-template">
+  <div >
+	   <table id="header">
+			  <tr>
+				  <td class="info-middle">
+					  <h1 id="nameT1">{{dictt['name']}}</h1>
+				  </td>
+				  <td class="info-small text-right info-middle">
+					  <p id="addressT">{{dictt['address']}}</p>
+					  <p id="number">{{dictt['number']}}</p>
+				  </td>
+			  </tr>
+	  </table>
+</div>
+
+  <table>
+	  <tr>
+		  <td>
+			  <h3 class="sec-label " name="heading">Skills</h3>
+		  </td>
+		  <td>
+			  
+			  <p id="tsT">
+				  {% set list1 = dictt['techskills'].split(';') %}
+                            {% for list in list1 %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+			  </p>
+		  </td>
+		  <td>
+			  <p id="ssT">
+          {% set list1 = dictt['softskills'].split(';') %}
+          {% for list in list1 %}
+          <li>{{ list }}</li>
+          {% endfor %}
+			  </p>
+		  </td>			
+	  </tr>
+  </table>
+
+	<hr class="section-break">
+	<!-- Objective Section -->
+		  <table>
+			  <tr>
+				  <td class="left">
+					  <h3 class="sec-label" name="heading">Objective</h3>
+				  </td>
+				  <td class="right">
+					  <p id="objT">{{dictt['obj']}}</p>
+				  </td>
+			  </tr>
+		  </table>
+	<hr class="section-break">
+	<!-- Education Section -->
+	  <table>
+		  <tr>
+			  <td class="left">
+				<h3 class="sec-label" name="heading">Academic Qualification</h3>
+			  </td>
+			  <td class="right">
+				<p id="aqT">
+          {% set list1 = dictt['aqual'].split(';') %}
+          {% for list in list1 %}
+          <li>{{ list }}</li>
+          {% endfor %}
+				</p>
+			  </td>
+		  </tr>
+	  </table>
+	<hr class="section-break">
+	
+	<!-- Work Experience Section -->
+	  <table>
+		  <tr>
+			  <td class="left">
+				<h3 class="sec-label" name="heading">Work Experience</h3>
+			  </td>
+			  <td class="right">
+				<p id="weT">
+				  {% set list1 = dictt['workexp'].split(';') %}
+                            {% for list in list1 %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+				</p>
+			  </td>
+		  </tr>
+	  </table>
+				
+	<hr class="section-break">		  
+	 <!-- Projects -->
+	  <table>
+		  <tr>
+			  <td class="left">
+					  <h3 class="sec-label" name="heading">Projects</h3>
+			  </td>
+			  <td class="right">
+				<p id="pjT">
+          {% set list1 = dictt['projects'].split(';') %}
+          {% for list in list1 %}
+          <li>{{ list }}</li>
+          {% endfor %}
+				</p> 
+			   </td>
+		  </tr>
+	  </table>
+	<hr class="section-break">
+	  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+	  <script>
+		  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+		  ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+	  </script>
+	  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </div>
+
+
+{% endblock %}

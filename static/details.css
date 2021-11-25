@@ -1,0 +1,25 @@
+.myimg{
+   
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+}
+
+#cv-template{
+    display: none;
+}
+
+.background{
+    background-color:#D3D3D3;
+}
+
+
+#dashboard-heading{
+    font-family:'Poppins', sans-serif;
+    font-weight:bold;
+}
+
+
+#about_box{
+    display:none;
+}

@@ -1,0 +1,129 @@
+
+  .main{
+    
+    width:794px;
+
+    /*
+    padding-left: 40px;
+    padding-right:40px;
+    padding-bottom:40px;
+    */
+  }
+
+  div {
+    border-radius: 5px;
+  }
+  
+  .prnt-btn{
+      border:0px;
+  }
+  
+
+  
+  #title {
+    margin-left: 3%;
+  }
+  
+
+  
+  .stuff {
+    display: inline-block;
+    margin-top: 6px;
+    margin-left: 55px;
+    width: 75%;
+  }
+  
+
+  
+  .head {
+    font-size: 20px;
+    color:brown;
+  }
+  
+  #name {
+    float: right;
+    margin-top: 10px;
+    margin-right: 4%;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  @media only screen and (max-width: 430px) {
+    .left,
+    .right {
+      display: none;
+    }
+    .stuff {
+      width: 100%;
+      margin-left: 10px;
+    }
+  }
+
+  #cv-template{
+   
+    margin:auto;
+    background-color:#FFFDD0;
+    
+  }
+
+  .myimg{   
+    float:right;
+    border-radius: 50%;
+    width:180px;
+    height:180px;
+}
+#settingsbtn{
+  color:black;
+}
+#printbtn{
+   color:black;
+}
+#toggle{
+   position:relative;
+   font-size: 1.5rem; 
+   color:white;
+   background-color:white;
+   border-color:white;
+   border-radius:50px;
+}
+#toggle-div{
+   text-align: left;
+}
+
+select{
+  padding:3px;
+  border:3px solid white;
+  background: transparent;
+  appearance: none;
+  font-size: 12px;
+  color: black;
+  border:1px solid black;
+}
+#style-section{
+    background-color:white;
+    color:black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border:1px solid black;
+    padding:30px;
+    box-shadow: 10px 10px 5px #ccc;
+    width:600px;
+    font-size:12px;
+}
+#apply-btn{
+    color:black;      
+    background-color: white;
+    position: absolute;
+    text-align: center;
+}
+
+#dashboard-heading{
+  font-family:'Poppins', sans-serif;
+  font-weight:bold;
+}
+
+#about_box{
+  display:none;
+}
